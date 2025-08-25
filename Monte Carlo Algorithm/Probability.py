@@ -4,67 +4,48 @@
 # Language: Python
 # ======================================================
 
-# Dice sample_space, each one dice has 6 side that mean the sample of one dice
-# is 6
-
 import random as rn
 import numpy as np
 
-trials = 2
-probability_of_dice = 6
-sample_space = probability_of_dice ** trials
+# Probability is the likelihood of an event occurring.
+# Its value is always between 0 (impossible) and 1 (certain to occur)
 
-print(sample_space)
+# Basic Formula of Probability
+# P(A) = total event A that desired / Total many possibility
+# e.g i will talk about dice, one dice has 6 side that mean 6 possibility and total event that desire is the
+# value that we wanted so we can calculate it like this so even we want a number but the possibility is 6
+# the desired dice always one
 
-# Sample Points
-for i in range(1, probability_of_dice + 1):
-    for j in range(1, probability_of_dice + 1):
-        print((i,j))
+desired_dice = 1
+dice_side = 6
+basic_possiblity = desired_dice / dice_side
 
-print(sample_space)
+print(f"{basic_possiblity * 100}%")
 
-trials = 3
+# Alright i move that part, so there is Sample Space, Sample Space is the values that unique i can say like in dice
+# is like values of 1,2,3 .. 6 like that, it called sample Space
+# Move to last one, this things called Sample Point or we can say the member of Sample Space it called Sample Point
+# example in one dice theres 6 side okay, every side that we roll is called Sample Point so example i rolled dice
+# an i got 4 that mean the sample point i got is 4
 
-#Probability of dice 5 appear
-#
-# trials = 3
-# p_single = 1/6
-#
-# p_at_least_one_5 = 1 - (1 - p_single) ** trials
-# p_two_5s = p_single ** trials
-#
-# print(p_at_least_one_5 * 100)
-# print(p_two_5s * 100)
-#
-# trials_of_dice = 3
-# p_single = 1/6
-#
-# p_at_least_one_5_and_3 = 2 * (p_single * p_single)
-# print(p_at_least_one_5_and_3 * 100)
-#
-#
+# furthermore to be clearly, example i rolled 2 dice, remember one dice has 6 sample that mean if 2 dice we had 36
+# example i rolled dice 2 and i got {1,4} if we pull the string it many from {1,1} to .. {6,6}
 
-# Dice 6 can appear in 6 trials
+# case if we roll 2 dice and how to find sample point
 
-probability_of_6 = 1/36
-n = 3
-expected_frequency = probability_of_6 * n
-print("Frekuensi harapan (teori):", expected_frequency)
-#
-# rolled_dadu = []
-# dadu_6 = []
-#
-# for _ in range(n):
-#     roll = rn.randint(1, 6)       # lempar dadu
-#     rolled_dadu.append(roll)      # simpan hasil
-#     if roll == 6:
-#         dadu_6.append(roll)       # simpan kalau hasil 6
-#
-# print("Hasil lemparan:", rolled_dadu)
-# print("Jumlah 6 yang muncul:", len(dadu_6))
+dice_1 = []
+dice_2 = []
+desired_dices = 1
+dice_side = 6
+all_combinations = []
 
-#
-#
-#
-#
+for d1 in range(1, dice_side + 1):
+    for d2 in range(1, dice_side + 1):
+        print((d1, d2))
+        all_combinations.append((d1, d2))
+
+
+length_data = len(all_combinations)
+print(length_data)
+
 
