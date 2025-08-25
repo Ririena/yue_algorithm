@@ -7,6 +7,9 @@
 import numpy as np
 import statistics as st
 import random as rd
+import math
+
+from numpy.ma.extras import average
 
 # ======================================================
 # Example Dataset
@@ -62,3 +65,42 @@ print(f"The Result of Healings {result_1}: {total_1}")
 # Interpretation:
 # Similar principle applies: total will vary within the possible min and max,
 # showing how dice rolls can illustrate the concept of data range and dispersion.
+
+#Variance
+
+data_one = [2,3,4,5,6,7]
+average_data_one = np.mean(data_one)
+
+print(f"Average of Data One: {average_data_one}")
+
+average_1 = (2-average_data_one) ** 2
+average_2 = (3-average_data_one) ** 2
+average_3 = (4-average_data_one) ** 2
+average_4 = (5-average_data_one) ** 2
+average_5 = (6-average_data_one) ** 2
+average_6 = (7-average_data_one) ** 2
+
+
+
+variance = (average_1 + average_2 + average_3 + average_4 + average_5 + average_6) / 6
+print(variance)
+root = math.sqrt(variance)
+print(root)
+
+list_data = []
+
+
+for data in data_one:
+    calculated = (data - average_data_one) ** 2
+    list_data.append(float(calculated))
+    summation = sum(list_data)
+    print(f"Summation {summation}")
+    variance_population = summation / len(data_one)
+    variance_sampel = summation / 5
+
+
+print(f" Adalah {list_data}")
+print(f" Variansi Populasinya {variance_population}")
+print(f" Variansi Sampelnya {variance_sampel}")
+standar_deviasi = math.sqrt(variance_population)
+print(f"Standar Deviasi {standar_deviasi}")
