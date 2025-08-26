@@ -104,3 +104,7 @@ print(f" Variansi Populasinya {variance_population}")
 print(f" Variansi Sampelnya {variance_sampel}")
 standar_deviasi = math.sqrt(variance_population)
 print(f"Standar Deviasi {standar_deviasi}")
+
+square_root = math.sqrt(50)
+print(square_root)
+

@@ -48,4 +48,15 @@ for d1 in range(1, dice_side + 1):
 length_data = len(all_combinations)
 print(length_data)
 
+# Complement Probability
+# Formula = P(A^c) = 1 - P(A)
+# One Dice has 6 side, example we want 3 as the desired number so we can write like this
+
+p_sample_space = 6
+p_sample_point = 6
+p_complement = 1 # Desired Values one
+
+calc_complement = 1 - (p_complement / p_sample_space)
+print(calc_complement * 100)
+
 
