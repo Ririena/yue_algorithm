@@ -139,3 +139,8 @@ s_sample = (siswa_laki_laki + siswa_perempuan) ** choosen_siswa
 calculate_choosen_siswa = 1 - (siswa_perempuan / s_sample)
 
 print(f"Kalkulasi bukan Siswa Perempuan yang dipilih adalah: {calculate_choosen_siswa * 100}%")
+
+P_EVENT = (6/15) / (10 / 15)
+
+print(P_EVENT)
+

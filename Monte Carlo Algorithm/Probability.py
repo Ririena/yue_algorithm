@@ -59,4 +59,13 @@ p_complement = 1 # Desired Values one
 calc_complement = 1 - (p_complement / p_sample_space)
 print(calc_complement * 100)
 
+#Basic Complement 
+tes_kom = 1 - (1 / 6)
+backward_kom = 1 - (5 / 6)
+
+print(tes_kom * 100) # Chance not get 6
+print(backward_kom * 100) #Change get one 6
+
+
+
 
